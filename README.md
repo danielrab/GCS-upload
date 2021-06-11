@@ -10,4 +10,5 @@
 # Description
 A module to make imports for the GURPS system easier. Currently it allows for quick reimports of XML files exported from GCS (GCA should also work but isn't tested). <br>
 It also restricts the files selection for the imports to XML in the file choosing dialog. <br>
-In the future I plan to try make it parse GCS files directly
+In the future I plan to try make it parse GCS files directly<br><br>
+manifest url: https://github.com/danielrab/GCS-upload/releases/latest/download/module.json
