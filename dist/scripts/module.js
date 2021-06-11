@@ -1,4 +1,4 @@
-import { UniversalFileHandler } from './universalFileHandler.js';
+import { UniversalFileHandler } from './fileHandlers/UniversalFileHandler.js';
 class SmartImporter {
     static getTemplateForActor(actor) {
         return Handlebars.compile(`<p class="notes">Select a file exported from GCS or GCA.</p>
@@ -33,4 +33,5 @@ async function newImport() {
 Hooks.on('ready', () => {
     CONFIG.Actor.documentClass.prototype._openImportDialog = newImport;
 });
+window.UniversalFileHandler = UniversalFileHandler;
 window.SmartImporter = SmartImporter;

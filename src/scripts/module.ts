@@ -1,12 +1,16 @@
 
-import type {FileInterface, InputTemplate} from './interfaces.js'
-import {UniversalFileHandler} from './universalFileHandler.js'
+import type {FileInterface, InputTemplate} from './fileHandlers/interfaces.js'
+import {UniversalFileHandler} from './fileHandlers/UniversalFileHandler.js'
+import {DirectGcsImporter} from './DirectGcsImporter'
 
 declare global {
   interface File {
     webkitRelativePath: string // the types module I am using is unaware of this property
   }
-  interface Window { SmartImporter: typeof SmartImporter; }
+  interface Window { 
+    SmartImporter: typeof SmartImporter
+    UniversalFileHandler: typeof UniversalFileHandler
+  }
 }
 
 class SmartImporter{
@@ -52,4 +56,5 @@ declare class GurpsActor extends Actor {
   importFromGCSv1(xml: string, importname: string, importpath?: string): Promise<boolean>
 }
 
+window.UniversalFileHandler = UniversalFileHandler
 window.SmartImporter = SmartImporter

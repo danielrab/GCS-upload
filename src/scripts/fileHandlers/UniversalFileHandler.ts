@@ -1,6 +1,6 @@
 import type {FileInterface, FolderInterface, InputTemplate} from './interfaces.js'
-import {ChromiumFileHandler} from './chromeFileHandler.js'
-import {FallbackFileHandler} from './fallbackFileHandler.js'
+import {ChromiumFileHandler} from './ChromeFileHandler.js'
+import {FallbackFileHandler} from './FallbackFileHandler.js'
 
 function getBrowser() {
   // the code is based on https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator
@@ -36,8 +36,3 @@ export class UniversalFileHandler {
     return IS_CHROMIUM? ChromiumFileHandler.getFolder(template): FallbackFileHandler.getFolder(template)
   }
 }
-
-declare global {
-  interface Window { UniversalFileHandler: typeof UniversalFileHandler; }
-}
-window.UniversalFileHandler = UniversalFileHandler
