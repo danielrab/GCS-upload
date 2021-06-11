@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "lib": ["DOM", "ES2020"],
+    "types": ["foundry-pc-types", "node", "@types/wicg-file-system-access"],
+    "allowUmdGlobalAccess": true,
+    "strict": true
+  },
+  "files": ["./gulpfile.ts"],
+  "exclude": [
+    "node_modules"
+  ]
+}
