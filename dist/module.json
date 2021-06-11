@@ -12,9 +12,8 @@
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "0.8.6",
   "manifestPlusVersion": "1.0.0",
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/danielrab/GCS-upload",
+  "manifest": "https://github.com/danielrab/GCS-upload/releases/latest/download/module.json",
   "type": "module",
   "includes": [
     "./assets/**",
